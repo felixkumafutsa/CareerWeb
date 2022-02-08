@@ -3,15 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/user/AndroidStudioProjects/CareerWeb/app/src/main/res/layout/activity_eligibility_check.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CareerWeb/app/src/main/res/drawable/back_view.xml" value="0.126" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CareerWeb/app/src/main/res/layout/activity_admin_page.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CareerWeb/app/src/main/res/layout/activity_eligibility_check.xml" value="0.18" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CareerWeb/app/src/main/res/layout/activity_faq.xml" value="0.1" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CareerWeb/app/src/main/res/layout/activity_home.xml" value="0.18" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CareerWeb/app/src/main/res/layout/activity_login.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CareerWeb/app/src/main/res/layout/activity_main.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CareerWeb/app/src/main/res/layout/activity_mentors.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CareerWeb/app/src/main/res/layout/activity_program.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CareerWeb/app/src/main/res/layout/activity_programs.xml" value="0.20677083333333332" />
         <entry key="..\:/Users/user/AndroidStudioProjects/CareerWeb/app/src/main/res/layout/activity_register.xml" value="0.20677083333333332" />
-        <entry key="..\:/Users/user/AndroidStudioProjects/CareerWeb/app/src/main/res/layout/activity_universities.xml" value="0.33" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CareerWeb/app/src/main/res/layout/activity_universities.xml" value="0.14" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CareerWeb/app/src/main/res/layout/activity_university_profile.xml" value="0.20677083333333332" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CareerWeb/app/src/main/res/layout/program_layout.xml" value="0.25" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/CareerWeb/app/src/main/res/layout/university_layout.xml" value="0.18385650224215247" />
       </map>
     </option>
   </component>

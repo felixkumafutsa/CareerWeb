@@ -18,7 +18,6 @@ public class Home extends AppCompatActivity {
 
         eligibiityButton = findViewById(R.id.eligibility);
         mentors = findViewById(R.id.mentorship);
-        login = findViewById(R.id.login);
         universities = findViewById(R.id.imageV13iew);
         programs = findViewById(R.id.imagew13Vie);
         faq = findViewById(R.id.imageViews13);
@@ -34,13 +33,6 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, Mentors.class));
-            }
-        });
-
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Home.this, Login.class));
             }
         });
 
@@ -64,4 +56,7 @@ public class Home extends AppCompatActivity {
         });
     }
 
+    public void toLogin(View view) {
+        startActivity(new Intent(Home.this, Login.class));
+    }
 }
