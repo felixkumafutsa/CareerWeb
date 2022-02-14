@@ -19,13 +19,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.MyViewHolder> {
+public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.MyViewHolder> {
 
     private Context context;
     private Activity activity;
     private ArrayList book_id, book_title, book_author, book_pages;
 
-    UniversityAdapter(Activity activity, Context context, ArrayList book_id, ArrayList book_title, ArrayList book_author,
+   MentorAdapter(Activity activity, Context context, ArrayList book_id, ArrayList book_title, ArrayList book_author,
                    ArrayList book_pages){
         this.activity = activity;
         this.context = context;
@@ -39,7 +39,7 @@ public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.My
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.university_layout, parent, false);
+        View view = inflater.inflate(R.layout.program_layout, parent, false);
         return new MyViewHolder(view);
     }
 

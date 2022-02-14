@@ -43,7 +43,7 @@ tools:context=".Register">
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Fill in academic scores"
+                android:text="Register to create account"
                 android:textSize="20sp"
                 android:textStyle="bold"></TextView>
 
@@ -86,15 +86,15 @@ tools:context=".Register">
                 android:layout_below="@+id/password"/>
 
             <TextView
-                android:id="@+id/toReister"
+                android:id="@+id/toLogin"
+                android:onClick="toLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/password1"
-                android:layout_marginStart="16dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:onClick="toLogin"
-                android:text="Reqistered user?, Login here"
-                android:textStyle="bold" />
+                android:text="Have an account? login instead"
+                android:textSize="15sp"
+                android:textStyle="bold"></TextView>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnsignup"
@@ -103,7 +103,8 @@ tools:context=".Register">
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_below="@+id/repassword"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="80dp"
                 android:text="Register" />
 
 

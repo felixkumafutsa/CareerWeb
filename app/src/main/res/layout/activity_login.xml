@@ -66,14 +66,14 @@ tools:context=".Login">
 
             <TextView
                 android:id="@+id/toReister"
+                android:onClick="toReg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/password1"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="20dp"
-                android:onClick="toReg"
-                android:text="New user?, Create account"
-                android:textStyle="bold" />
+                android:layout_gravity="center"
+                android:text="Create Account"
+                android:layout_marginTop="15dp"
+                android:textSize="15sp"
+                android:textStyle="bold"></TextView>
 
 
             <androidx.appcompat.widget.AppCompatButton
@@ -84,7 +84,7 @@ tools:context=".Login">
                 android:layout_marginTop="15dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="15dp"
+                android:layout_marginBottom="80dp"
                 android:layout_below="@+id/toReister"/>
 
 

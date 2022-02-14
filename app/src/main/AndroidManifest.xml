@@ -3,6 +3,7 @@
     package="com.example.careerweb">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
@@ -11,6 +12,12 @@
         android:roundIcon="@drawable/graduation_cap_100px"
         android:supportsRtl="true"
         android:theme="@style/Theme.CareerWeb">
+        <activity
+            android:name=".AddFaq"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterMentor"
+            android:exported="false" />
         <activity
             android:name=".MentorPage"
             android:exported="false" />

@@ -10,7 +10,8 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp">
+        android:layout_marginTop="12dp"
+        android:padding="23dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -25,7 +26,7 @@
                 android:layout_marginTop="3dp"
                 android:text="1"
                 android:textColor="#000"
-                android:textSize="40sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -45,11 +46,11 @@
                 app:layout_constraintTop_toTopOf="@+id/book_id_txt" />
 
             <TextView
-                android:id="@+id/book_author_txt"
+                android:id="@+id/book_title_txt"
                 android:layout_width="100dp"
                 android:layout_height="31dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="36dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="4dp"
                 android:maxLines="4"
                 android:text="lilongwe"
                 android:textSize="15sp"
@@ -57,14 +58,15 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/book_title_txt"
-                android:layout_width="326dp"
-                android:layout_height="96dp"
-                android:text="Mzuzu Primary school zones were introduced by the Malawi government
-under the ministry of education, science and technology to manage a group of primary schools in a catchment area.
-Each zone is comprised of ten to fifteen schools according to number of schools in a particular catchment area"
+                android:id="@+id/book_author_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Mzuzticular catchment area"
+                android:padding="30dp"
                 android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="@+id/book_pages_txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/book_pages_txt" />
 
 

@@ -67,6 +67,29 @@ public class DatabaseAccess {
         return cursor;
     }
 
+
+    Cursor readAllFaculties(){
+        String query = "SELECT * FROM faculties";
+        SQLiteDatabase db = openHelper.getReadableDatabase();
+
+        Cursor cursor = null;
+        if(db != null){
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
+    Cursor readAllMentors(){
+        String query = "SELECT * FROM mentors";
+        SQLiteDatabase db = openHelper.getReadableDatabase();
+
+        Cursor cursor = null;
+        if(db != null){
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
+
     void updateUniversityData(String row_id, String title, String author, String pages){
         SQLiteDatabase db = openHelper.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -166,6 +189,21 @@ public class DatabaseAccess {
         else
             return true;
     }
+    public Boolean insertMentorData(String firstname, String lastname,String username, String phone, String password ){
+        SQLiteDatabase MyDB = openHelper.getWritableDatabase();
+        ContentValues contentValues= new ContentValues();
+        contentValues.put("firstname", firstname);
+        contentValues.put("lastname", lastname);
+        contentValues.put("username", username);
+        contentValues.put("phone", phone);
+        contentValues.put("password", password);
+        long result = MyDB.insert("mentors", null, contentValues);
+        if(result==-1) return false;
+        else
+            return true;
+    }
+
+
 
     public Boolean checkusername(String name) {
         SQLiteDatabase MyDB = openHelper.getWritableDatabase();

@@ -7,58 +7,52 @@ import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.MyViewHolder> {
+public class FacultyAdapter extends RecyclerView.Adapter<FacultyAdapter.MyViewHolder> {
 
     private Context context;
     private Activity activity;
-    private ArrayList book_id, book_title, book_author, book_pages;
+    private ArrayList faculty_id, faculty_name, university;
 
-    UniversityAdapter(Activity activity, Context context, ArrayList book_id, ArrayList book_title, ArrayList book_author,
-                   ArrayList book_pages){
+    FacultyAdapter(Activity activity, Context context, ArrayList faculty_id, ArrayList faculty_name, ArrayList university){
         this.activity = activity;
         this.context = context;
-        this.book_id = book_id;
-        this.book_title = book_title;
-        this.book_author = book_author;
-        this.book_pages = book_pages;
+        this.faculty_id = faculty_id;
+        this.faculty_name = faculty_name;
+        this.university = university;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.university_layout, parent, false);
+        View view = inflater.inflate(R.layout.program_layout, parent, false);
         return new MyViewHolder(view);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
-        holder.book_id_txt.setText(String.valueOf(book_id.get(position)));
-        holder.book_title_txt.setText(String.valueOf(book_title.get(position)));
-        holder.book_author_txt.setText(String.valueOf(book_author.get(position)));
-        holder.book_pages_txt.setText(String.valueOf(book_pages.get(position)));
+        holder.book_id_txt.setText(String.valueOf(faculty_id.get(position)));
+        holder.book_title_txt.setText(String.valueOf(faculty_name.get(position)));
+        holder.book_author_txt.setText(String.valueOf(university.get(position)));
+
         //Recyclerview onClickListener
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(context, UniversityProfile.class);
-                intent.putExtra("id", String.valueOf(book_id.get(position)));
-                intent.putExtra("title", String.valueOf(book_title.get(position)));
-                intent.putExtra("author", String.valueOf(book_author.get(position)));
-                intent.putExtra("pages", String.valueOf(book_pages.get(position)));
+                intent.putExtra("id", String.valueOf(faculty_id.get(position)));
+                intent.putExtra("title", String.valueOf(faculty_name.get(position)));
+                intent.putExtra("author", String.valueOf(university.get(position)));
                 activity.startActivityForResult(intent, 1);
             }
         });
@@ -67,7 +61,7 @@ public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.My
 
     @Override
     public int getItemCount() {
-        return book_id.size();
+        return faculty_id.size();
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {

@@ -36,26 +36,59 @@ public class EligibilityCheck extends AppCompatActivity {
     }
 
     private void checkEligibility() {
-        int aggregateScore = 0;
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Eligibility Results");
-        builder.setMessage("You are legible to be admitted into a University program tap proceed" +
-                " to view recommended programs or cancel to go to homepage");
-        builder.setPositiveButton("proceed", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                Intent intent = new Intent(EligibilityCheck.this, Universities.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
+        int en,mat,bio,chem, phy,agr;
+        en = Integer.parseInt(english_score.getText().toString());
+        mat = Integer.parseInt(maths_score.getText().toString());
+        bio = Integer.parseInt(bio_score.getText().toString());
+        chem = Integer.parseInt(chemistry_score.getText().toString());
+        phy = Integer.parseInt(physics_score.getText().toString());
+        agr = Integer.parseInt(agriculture_score.getText().toString());
+        int aggregateScore = en + mat + bio + chem + phy + agr;
 
-            }
-        });
-        builder.create().show();
+        if (aggregateScore > 0 && aggregateScore <= 30 && en > 0 && mat > 0 && bio > 0 && chem > 0
+                && phy > 6 && agr > 0 && en <= 6 && mat <= 6 && bio <= 6 && chem<= 6 && phy <= 6 && agr <= 6 ){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Eligibility Results");
+            builder.setMessage("You are legible to be admitted into a University program tap proceed" +
+                    " to view recommended programs or cancel to go to homepage");
+            builder.setPositiveButton("proceed", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    Intent intent = new Intent(EligibilityCheck.this, Universities.class);
+                    startActivity(intent);
+                    finish();
+                }
+            });
+            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                }
+            });
+            builder.create().show();
+        }
+        else{
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Eligibility Results");
+            builder.setMessage("You are not legible to be admitted into a University program tap proceed" +
+                    " to view recommended programs or cancel to go to homepage");
+            builder.setPositiveButton("proceed", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    Intent intent = new Intent(EligibilityCheck.this, EligibilityCheck.class);
+                    startActivity(intent);
+                    finish();
+                }
+            });
+            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                }
+            });
+            builder.create().show();
+        }
+
     }
 }

@@ -32,7 +32,7 @@ public class Home extends AppCompatActivity {
         mentors.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Home.this, Mentors.class));
+                startActivity(new Intent(Home.this, RegisterMentor.class));
             }
         });
 
