@@ -203,7 +203,15 @@ public class DatabaseAccess {
             return true;
     }
 
-
+    public Boolean insertFaqData(String content ){
+        SQLiteDatabase MyDB = openHelper.getWritableDatabase();
+        ContentValues contentValues= new ContentValues();
+        contentValues.put("content", content);
+        long result = MyDB.insert("faq", null, contentValues);
+        if(result==-1) return false;
+        else
+            return true;
+    }
 
     public Boolean checkusername(String name) {
         SQLiteDatabase MyDB = openHelper.getWritableDatabase();
