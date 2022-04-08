@@ -13,9 +13,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
-
-
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -103,7 +100,27 @@
                                     android:ems="10"
                                     android:hint="Physics"
                                     android:inputType="number"/>
+                                <EditText
+                                    android:id="@+id/geog"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginTop="5dp"
+                                    android:ems="10"
+                                    android:hint="Geography"
+                                    android:inputType="number"/>
 
+                                <EditText
+                                    android:id="@+id/chichewa"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginTop="5dp"
+                                    android:ems="10"
+                                    android:hint="Chichewa"
+                                    android:inputType="number"/>
                                 <EditText
                                     android:id="@+id/agri"
                                     android:layout_width="match_parent"
@@ -113,6 +130,40 @@
                                     android:layout_marginTop="5dp"
                                     android:ems="10"
                                     android:hint="Agriculture"
+                                    android:inputType="number"/>
+
+                                <EditText
+                                    android:id="@+id/bk"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginTop="5dp"
+                                    android:ems="10"
+                                    android:hint="Bible Knowledge"
+                                    android:inputType="number"/>
+
+
+                                <EditText
+                                    android:id="@+id/history"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginTop="5dp"
+                                    android:ems="10"
+                                    android:hint="History "
+                                    android:inputType="number"/>
+
+                                <EditText
+                                    android:id="@+id/social"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginTop="5dp"
+                                    android:ems="10"
+                                    android:hint="Social Studies"
                                     android:inputType="number"/>
 
                             <androidx.appcompat.widget.AppCompatButton

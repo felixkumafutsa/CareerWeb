@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -39,7 +40,7 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.MyViewHold
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View view = inflater.inflate(R.layout.program_layout, parent, false);
+        View view = inflater.inflate(R.layout.mentor_layout, parent, false);
         return new MyViewHolder(view);
     }
 
@@ -54,7 +55,7 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.MyViewHold
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, UniversityProfile.class);
+                Intent intent = new Intent(context, MentorPage.class);
                 intent.putExtra("id", String.valueOf(book_id.get(position)));
                 intent.putExtra("title", String.valueOf(book_title.get(position)));
                 intent.putExtra("author", String.valueOf(book_author.get(position)));
@@ -73,7 +74,7 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.MyViewHold
     class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView book_id_txt, book_title_txt, book_author_txt, book_pages_txt;
-        LinearLayout mainLayout;
+        LinearLayoutCompat mainLayout;
 
         MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -81,7 +82,7 @@ public class MentorAdapter extends RecyclerView.Adapter<MentorAdapter.MyViewHold
             book_title_txt = itemView.findViewById(R.id.book_title_txt);
             book_author_txt = itemView.findViewById(R.id.book_author_txt);
             book_pages_txt = itemView.findViewById(R.id.book_pages_txt);
-            mainLayout = itemView.findViewById(R.id.mainLayout);
+            mainLayout = itemView.findViewById(R.id.mentorLayout);
             //Animate Recyclerview
             //Animation translate_anim = AnimationUtils.loadAnimation(context, R.anim.translate_anim);
             //mainLayout.setAnimation(translate_anim);

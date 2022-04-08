@@ -66,7 +66,16 @@ public class DatabaseAccess {
         }
         return cursor;
     }
+    Cursor readAllFaq(){
+        String query = "SELECT * FROM faq";
+        SQLiteDatabase db = openHelper.getReadableDatabase();
 
+        Cursor cursor = null;
+        if(db != null){
+            cursor = db.rawQuery(query, null);
+        }
+        return cursor;
+    }
 
     Cursor readAllFaculties(){
         String query = "SELECT * FROM faculties";
@@ -189,14 +198,12 @@ public class DatabaseAccess {
         else
             return true;
     }
-    public Boolean insertMentorData(String firstname, String lastname,String username, String phone, String password ){
+    public Boolean insertMentorData(String fname, String lname, String phoneNumber){
         SQLiteDatabase MyDB = openHelper.getWritableDatabase();
         ContentValues contentValues= new ContentValues();
-        contentValues.put("firstname", firstname);
-        contentValues.put("lastname", lastname);
-        contentValues.put("username", username);
-        contentValues.put("phone", phone);
-        contentValues.put("password", password);
+        contentValues.put("firstname", fname);
+        contentValues.put("lastname", lname);
+        contentValues.put("phone", phoneNumber);
         long result = MyDB.insert("mentors", null, contentValues);
         if(result==-1) return false;
         else

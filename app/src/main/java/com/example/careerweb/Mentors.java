@@ -31,7 +31,7 @@ public class Mentors extends AppCompatActivity {
 
     DatabaseAccess myDB;
     ArrayList<String> book_id, book_title, book_author, book_pages;
-    ProgramAdapter universityAdapter;
+    MentorAdapter mentorAdapter;
     Button queryButton;
     EditText name;
     TextView result_text;
@@ -63,9 +63,9 @@ public class Mentors extends AppCompatActivity {
 
         storeDataInArrays();
 
-        universityAdapter = new ProgramAdapter(Mentors.this,this, book_id, book_title, book_author,
+        mentorAdapter = new MentorAdapter(Mentors.this,this, book_id, book_title, book_author,
                 book_pages);
-        recyclerView.setAdapter(universityAdapter);
+        recyclerView.setAdapter(mentorAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(Mentors.this));
 
     }
@@ -119,7 +119,7 @@ public class Mentors extends AppCompatActivity {
                 DatabaseAccess myDB = new DatabaseAccess(Mentors.this);
                 myDB.deleteAllCourses();
                 //Refresh Activity
-                Intent intent = new Intent(Mentors.this, Programs.class);
+                Intent intent = new Intent(Mentors.this, Mentors.class);
                 startActivity(intent);
                 finish();
             }

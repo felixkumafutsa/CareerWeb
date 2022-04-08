@@ -9,16 +9,17 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class Home extends AppCompatActivity {
-    Button eligibiityButton, mentors, login;
-    ImageButton universities, programs, faq;
+    Button eligibiityButton, mentorship, login;
+    ImageButton universities, programs, faq, all_mentors;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
         eligibiityButton = findViewById(R.id.eligibility);
-        mentors = findViewById(R.id.mentorship);
+        mentorship = findViewById(R.id.mentorship);
         universities = findViewById(R.id.imageV13iew);
+        all_mentors = findViewById(R.id.imageView1d3);
         programs = findViewById(R.id.imagew13Vie);
         faq = findViewById(R.id.imageViews13);
 
@@ -29,10 +30,16 @@ public class Home extends AppCompatActivity {
             }
         });
 
-        mentors.setOnClickListener(new View.OnClickListener() {
+        mentorship.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Home.this, RegisterMentor.class));
+            }
+        });
+        all_mentors.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this, Mentors.class));
             }
         });
 

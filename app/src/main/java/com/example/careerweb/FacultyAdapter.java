@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -67,7 +68,7 @@ public class FacultyAdapter extends RecyclerView.Adapter<FacultyAdapter.MyViewHo
     class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView book_id_txt, book_title_txt, book_author_txt, book_pages_txt;
-        LinearLayout mainLayout;
+        LinearLayoutCompat mainLayout;
 
         MyViewHolder(@NonNull View itemView) {
             super(itemView);

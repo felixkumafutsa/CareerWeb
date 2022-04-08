@@ -26,8 +26,8 @@ public class UniversityProfile extends AppCompatActivity {
     TextView no_data;
 
     DatabaseAccess myDB;
-    ArrayList<String> university_id, university_name, district, short_name;
-    UniversityAdapter universityAdapter;
+    ArrayList<String> faculty_id, faculty_name, university_name;
+    FacultyAdapter facultyAdapter;
     Button queryButton;
     EditText name;
     TextView result_text;
@@ -52,16 +52,14 @@ public class UniversityProfile extends AppCompatActivity {
 
 
         myDB = new DatabaseAccess(UniversityProfile.this);
-        university_id = new ArrayList<>();
+        faculty_id = new ArrayList<>();
+        faculty_name = new ArrayList<>();
         university_name = new ArrayList<>();
-        district = new ArrayList<>();
-        short_name = new ArrayList<>();
 
         storeDataInArrays();
 
-        universityAdapter = new UniversityAdapter(UniversityProfile.this,this, university_id, university_name, district,
-                short_name);
-        recyclerView.setAdapter(universityAdapter);
+        facultyAdapter = new FacultyAdapter(UniversityProfile.this,this, faculty_id, faculty_name, university_name);
+        recyclerView.setAdapter(facultyAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(UniversityProfile.this));
 
     }
@@ -80,10 +78,9 @@ public class UniversityProfile extends AppCompatActivity {
             // no_data.setVisibility(View.VISIBLE);
         }else{
             while (cursor.moveToNext()){
-                university_id.add(cursor.getString(0));
+                faculty_id.add(cursor.getString(0));
                 university_name.add(cursor.getString(1));
-                district.add(cursor.getString(2));
-                short_name.add(cursor.getString(3));
+                faculty_name.add(cursor.getString(2));
             }
             // empty_imageview.setVisibility(View.GONE);
             //no_data.setVisibility(View.GONE);

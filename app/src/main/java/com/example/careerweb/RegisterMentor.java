@@ -32,19 +32,15 @@ public class RegisterMentor extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String fname = firstname.getText().toString();
-                String lname = lastname.getText().toString();
-                String user = username.getText().toString();
+                String user = lastname.getText().toString();
                 String phoneNumber = phone.getText().toString();
-                String pass = password.getText().toString();
-                String repass = repassword.getText().toString();
 
-                if(user.equals("")||pass.equals("")||repass.equals(""))
+                if(user.equals("")||fname.equals("")||phoneNumber.equals(""))
                     Toast.makeText(RegisterMentor.this, "Please enter all the fields", Toast.LENGTH_SHORT).show();
                 else{
-                    if(pass.equals(repass)){
                         Boolean checkuser = DB.checkusername(user);
                         if(checkuser==false){
-                            Boolean insert = DB.insertMentorData(fname, lname, user, phoneNumber, pass);
+                            Boolean insert = DB.insertMentorData(fname, user, phoneNumber);
                             if(insert==true){
                                 Toast.makeText(RegisterMentor.this, "Mentor Registered successfully", Toast.LENGTH_SHORT).show();
                                 Intent intent = new Intent(getApplicationContext(),Home.class);
@@ -56,10 +52,7 @@ public class RegisterMentor extends AppCompatActivity {
                         else{
                             Toast.makeText(RegisterMentor.this, "User already exists! please sign in", Toast.LENGTH_SHORT).show();
                         }
-                    }else{
-                        Toast.makeText(RegisterMentor.this, "Passwords not matching", Toast.LENGTH_SHORT).show();
-                    }
-                } }
+                   } }
         });
 
     }

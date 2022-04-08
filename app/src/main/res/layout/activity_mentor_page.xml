@@ -33,7 +33,7 @@
                     app:layout_constraintHorizontal_bias="0.6"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/mobile" />
+                    app:srcCompat="@drawable/d" />
 
                 <ImageView
                     android:id="@+id/imageView8"
@@ -46,16 +46,16 @@
                     app:layout_constraintHorizontal_bias="0.945"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
+                    app:layout_constraintVertical_bias="0.618" />
 
                 <TextView
                     android:id="@+id/title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="52dp"
                     android:text="Mentor Page"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="20dp"
                     android:textStyle="bold"
                     app:layout_constraintStart_toStartOf="parent"
@@ -100,7 +100,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="20dp"
                     android:ems="10"
-                    android:hint="Phone Number"
+                    android:hint="0885643678"
                     android:textColorHint="@color/black"
                     android:inputType="phone"
                     tools:layout_editor_absoluteX="99dp"

@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -73,7 +74,7 @@ public class UniversityAdapter extends RecyclerView.Adapter<UniversityAdapter.My
     class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView book_id_txt, book_title_txt, book_author_txt, book_pages_txt;
-        LinearLayout mainLayout;
+        LinearLayoutCompat mainLayout;
 
         MyViewHolder(@NonNull View itemView) {
             super(itemView);

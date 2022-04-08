@@ -39,7 +39,7 @@ public class MentorPage extends AppCompatActivity {
         });
     }
     private void sendSms(){
-        String phoneNumber = phone.getText().toString().trim();
+        String phoneNumber = "0997473256";
         String SMS = message.getText().toString().trim();
 
         try {
